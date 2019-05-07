@@ -28,7 +28,7 @@ export default class Recipe extends Component {
                     <div className="card-footer">
                         <Link
                             to={`/recipes/${recipe_id}`}
-                            className="btn btn-primary text-capitalize"
+                            className="btn btn-primary text-capitalize mobile-btn"
                         >
                             Ingredients
                         </Link>
@@ -36,7 +36,7 @@ export default class Recipe extends Component {
                             href={source_url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="btn btn-success mx-2 text-capetalize"
+                            className="btn btn-success mx-2 text-capetalize mobile-btn"
                         >
                             View Recipe
                         </a>

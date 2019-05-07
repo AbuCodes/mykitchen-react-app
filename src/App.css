@@ -23,6 +23,9 @@ body {
     letter-spacing: 0.1rem;
 }
 
+.mobile-btn {
+}
+
 .btn-secondary {
     color: #fff !important;
     background-color: #f44336 !important;
@@ -39,4 +42,17 @@ body {
 .default-hero {
     background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
         url("./images/defaultBcg.jpeg") center/cover no-repeat;
+}
+
+@media screen and (max-width: 976px) {
+    .text-slanted {
+        /* font-family: "Indie Flower", cursive !important; */
+        padding: 0 0 0 0 !important;
+        text-transform: capitalize !important;
+        font-size: 2rem !important;
+        margin-bottom: 40px;
+    }
+    .mobile-btn {
+        padding: 0.275rem 0.4rem !important;
+    }
 }
