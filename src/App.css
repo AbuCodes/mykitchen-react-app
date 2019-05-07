@@ -3,6 +3,11 @@ body {
 }
 
 .text-slanted {
+    /*     font-family: "Indie Flower", cursive !important; */
+    padding: 0 380px 0 380px !important;
+    text-transform: capitalize !important;
+    font-size: 3.5rem !important;
+    margin-bottom: 40px;
 }
 
 .text-orange {
@@ -10,5 +15,17 @@ body {
 }
 
 .letter-spacing {
-    letter-spacing: 0.5rem;
+    letter-spacing: 0.1rem;
+}
+
+.btn-secondary {
+    color: #fff !important;
+    background-color: #f44336 !important;
+    border-color: #ffffff !important;
+}
+
+.header-hero {
+    min-height: 100vh;
+    background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
+        url("./images/homeBcg.jpeg") center/cover no-repeat;
 }
