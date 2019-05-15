@@ -36,7 +36,7 @@ body {
 .default-hero {
     min-height: 100vh;
     background: linear-gradient(rgb(0, 0, 0, 0.3), rgb(0, 0, 0, 0.3)),
-        url("./images/homeBcg.jpeg") center/cover no-repeat;
+        url("./images/newimg.jpg") center/cover no-repeat;
 }
 
 .default-hero {
