@@ -16,7 +16,7 @@ export default class Recipes extends Component {
     base_url: `https://api.edamam.com/search`,
     query: "?q=",
     error: "",
-    api: process.env.APP_API
+    api: process.env.REACT_APP_API
   };
 
   async getRecipes() {
