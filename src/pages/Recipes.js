@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import RecipeList from "../components/RecipeList";
-import Search from "../components/Search";
-import { recipeData } from "../data/tempList";
+import React, { Component } from 'react';
+import RecipeList from '../components/RecipeList';
+import Search from '../components/Search';
+import { recipeData } from '../data/tempList';
 
 export default class Recipes extends Component {
   constructor(props) {
@@ -11,12 +11,12 @@ export default class Recipes extends Component {
 
   state = {
     recipes: recipeData,
-    search: "",
+    search: '',
     url: `https://api.edamam.com/search`,
     base_url: `https://api.edamam.com/search`,
-    query: "?q=",
-    error: "",
-    api: process.env.REACT_APP_API
+    query: '?q=',
+    error: '',
+    api: process.env.REACT_APP_EDAMAM_API
   };
 
   async getRecipes() {
@@ -26,12 +26,12 @@ export default class Recipes extends Component {
       console.log(jsonData);
       if (jsonData.hits.count === 0) {
         this.setState({
-          error: "Sorry your search did not return any results"
+          error: 'Sorry your search did not return any results'
         });
       } else {
         this.setState({
           recipes: jsonData.hits,
-          error: ""
+          error: ''
         });
       }
 
@@ -59,7 +59,7 @@ export default class Recipes extends Component {
     this.setState(
       {
         url: `${base_url}${query}${search}${api}`,
-        search: ""
+        search: ''
       },
       () => this.getRecipes()
     );
@@ -75,9 +75,9 @@ export default class Recipes extends Component {
         />
         {this.state.error ? (
           <section>
-            <div className="row">
-              <div className="col">
-                <h2 className="text-orange text-center text-uppercase mt-5">
+            <div className='row'>
+              <div className='col'>
+                <h2 className='text-orange text-center text-uppercase mt-5'>
                   {this.state.error}
                 </h2>
               </div>
