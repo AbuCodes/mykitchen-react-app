@@ -23,7 +23,6 @@ export default class Recipes extends Component {
     try {
       const data = await fetch(this.state.url);
       const jsonData = await data.json();
-      console.log(jsonData);
       if (jsonData.hits.count === 0) {
         this.setState({
           error: 'Sorry your search did not return any results'
@@ -38,6 +37,7 @@ export default class Recipes extends Component {
       this.setState({
         recipes: jsonData.hits
       });
+      this.props.setRecipes(this.state.recipes);
     } catch (error) {
       console.log(error);
     }
@@ -45,6 +45,7 @@ export default class Recipes extends Component {
 
   async componentDidMount() {
     //this.getRecipes();
+    this.props.setRecipes(recipeData);
   }
 
   handleChange = e => {
